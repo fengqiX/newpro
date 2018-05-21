@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8"> 
-	<title>点单界面</title> 
-	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <meta charset="utf-8">
+    <title>点单界面</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
 </head>
+
 <body>
-	
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-6" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:50%;overflow:auto; position: relative;">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">点菜汪</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">登陆界面</a></li>
+                    <li><a href="navigation.html">管理界面</a></li>
+                    <li class="active"><a href="main.html">点菜界面</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:50%;overflow:auto; position: relative;">
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <caption>已点菜品</caption>
-        <!--
+                        <!--
             <thead>
               <tr>
                 <th>产品</th>
@@ -25,55 +46,1085 @@
             </thead>
         -->
                         <tbody>
-                          <tr>
-                            <td>菜名1</td>
-                            <td>99.9</td>
-                            <td>1</td>
-                              <td>99.9</td>
+                            <tr>
+                                <td>菜名1</td>
+                                <td>99.9</td>
+                                <td>1</td>
+                                <td>99.9</td>
                             </tr>
-                          <tr>
-                            <td>菜名2</td>
-                            <td>99.9</td>
-                            <td>1</td>
-                              <td>99.9</td>
+                            <tr>
+                                <td>菜名2</td>
+                                <td>99.9</td>
+                                <td>1</td>
+                                <td>99.9</td>
                             </tr>
-                                  <tr>
-                            <td>菜名3</td>
-                            <td>99.9</td>
-                            <td>1</td>
-                              <td>99.9</td>
+                            <tr>
+                                <td>菜名3</td>
+                                <td>99.9</td>
+                                <td>1</td>
+                                <td>99.9</td>
                             </tr>
-                          <tr>
+                            <tr>
+                                <tr>
+                                    <td>菜名4</td>
+                                    <td>99.9</td>
+                                    <td>1</td>
+                                    <td>99.9</td>
+                                </tr>
+                                <tr>
                                     <tr>
-                            <td>菜名4</td>
-                            <td>99.9</td>
-                            <td>1</td>
-                              <td>99.9</td>
-                            </tr>
-                          <tr>
+                                        <td>菜名5</td>
+                                        <td>99.9</td>
+                                        <td>1</td>
+                                        <td>99.9</td>
+                                    </tr>
                                     <tr>
-                            <td>菜名5</td>
-                            <td>99.9</td>
-                            <td>1</td>
-                              <td>99.9</td>
-                            </tr>
-                          <tr>
 
                         </tbody>
                     </table>
                     <p class="text-right">合计：<strong>XXXX元</strong></p>
+                </div>
             </div>
-        </div>
-        
-        <div class="col-md-6 col-sm-6" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:500px;overflow:auto; position: relative;">
-             <div class="col-md-4 col-sm-4">
+
+            <div class="col-md-6 col-sm-6" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:500px;overflow:auto; position: relative;">
+                <div class="col-md-4 col-sm-4">
+                    <!-- temp menu -->
+                    <!--  left menu row  -->
+                    <article class="lmenu">
+                        <ul class="list-group w3-ul w3-card-4 w3-hoverable">
+                            <li class="list-group-item item_name">Lunch Combo</li>
+                            <li class="list-group-item item_name">Salad</li>
+                            <li class="list-group-item item_name">Tataki</li>
+                            <li class="list-group-item item_name">Appetizer</li>
+                            <li class="list-group-item item_name">Rice</li>
+                            <li class="list-group-item item_name">Roll(6pcs)</li>
+                            <li class="list-group-item item_name">Roll(8pcs)</li>
+                            <li class="list-group-item item_name">Special Roll(9pcs)</li>
+                            <li class="list-group-item item_name">Sashimi</li>
+                            <li class="list-group-item item_name">Sushi</li>
+                            <li class="list-group-item item_name">Combo</li>
+                            <li class="list-group-item item_name">Party Tray</li>
+                            <li class="list-group-item item_name">Teriyaki</li>
+                            <li class="list-group-item item_name">Katsu</li>
+                            <li class="list-group-item item_name">Udon</li>
+                            <li class="list-group-item item_name">Don Bury</li>
+                            <li class="list-group-item item_name">Tempura</li>
+                            <li class="list-group-item item_name">Sides</li>
+                        </ul>
+                    </article>
+
+                </div>
+                <!-- end menu -->
+                <div class="col-md-8 col-sm-8">
+                    <!--  right menu row  -->
+                    <article class="rmenu">
+                        <div style="display:block;" class="Lunch Combo">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">1.Combo one $12.95
+                                            <a href="#" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-plus"></span></a>
+                                            <a href="#" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-minus"></span></a>
+                                        </h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">2.California Roll+sushi(3pcs)+salad+Choice of:<br>sashimi(4pcs)/spicy salmon sashimi/spicy tuna sashimi</h4>
+
+                                    </div>
+                                    <h5 class="price">$15.45</h5>
+
+
+                                </li>
+                            </ul>
+                        </div>
+                        <!--lunch combo-->
+
+                        <div style="display:none;" class="Salad">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+
+                                        <h4 class="item_name">3.Green Salad</h4>
+
+                                        <a href="#" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-plus"></span></a>
+                                        <a href="#" class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-minus"></span></a>
+
+                                        <p class="item_desc">spring mix</p>
+
+                                    </div>
+                                    <h5 class="price">$5.45</h5>
+                                    <span class="separator"></span>
+
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">4.Miso Chicken Salad</h4>
+                                        <p class="item_desc">spring mix,sesame miso sauce</p>
+                                    </div>
+                                    <h5 class="price">$8.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">5.Smoked Salmon Salad</h4>
+                                        <p class="item_desc">spring mix,smoked salmon</p>
+                                    </div>
+                                    <h5 class="price">$8.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">6.Seafood Salad</h4>
+                                        <p class="item_desc">spring mix,bean vermicelli,masago,wasabi mayo</p>
+                                    </div>
+                                    <h5 class="price">$10.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--salad-->
+
+                        <div style="display:none;" class="Tataki">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">8.Tuna Tataki</h4>
+                                        <p class="item_desc">onion,green onion</p>
+                                    </div>
+                                    <h5 class="price">$10.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">9.Beef Tataki</h4>
+                                        <p class="item_desc">onion,green onion</p>
+                                    </div>
+                                    <h5 class="price">$10.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--tataki-->
+                        <div style="display:none;" class="Appetizer">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">10.Gyoza</h4>
+                                        <p class="item_desc">pork</p>
+                                    </div>
+                                    <h5 class="price">$6.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">11.Gomae(spinach salad)</h4>
+                                        <p class="item_desc">sesame,peanut butter sauce</p>
+                                    </div>
+                                    <h5 class="price">$4.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">13.Edemame</h4>
+
+                                    </div>
+                                    <h5 class="price">$5.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">14.Agedashi Tofu</h4>
+                                        <p class="item_desc"></p>
+                                    </div>
+                                    <h5 class="price">$5.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">15.Spicy Agedashi Tofu</h4>
+                                        <p class="item_desc"></p>
+                                    </div>
+                                    <h5 class="price">$5.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">16.Takoyaki</h4>
+                                        <p class="item_desc"></p>
+                                    </div>
+                                    <h5 class="price">$5.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">17.Shrimp Dumpling</h4>
+                                        <p class="item_desc"></p>
+                                    </div>
+                                    <h5 class="price">$7.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">18.Spring Roll</h4>
+                                        <p class="item_desc"></p>
+                                    </div>
+                                    <h5 class="price">$6.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">19.Sunomono</h4>
+                                        <p class="item_desc">vernicelli,shrimp</p>
+                                    </div>
+                                    <h5 class="price">$5.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">20.Wakame</h4>
+                                        <p class="item_desc">seaweed salad</p>
+                                    </div>
+                                    <h5 class="price">$5.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--appetizer-->
+                        <div style="display:none;" class="Rice">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">21.Shrimp Rice</h4>
+
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">22.Veggie Rice</h4>
+
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">23.Beef Grill Rice</h4>
+
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--rice-->
+                        <div style="display:none;" class="Roll(6pcs)">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">25.Kappa Roll</h4>
+                                        <p class="item_desc">cucumber</p>
+                                    </div>
+                                    <h5 class="price">$3.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">26.Tuna Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">27.Salmon Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">28.Tamago Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">29.Radish Pickle Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">30.Negitoro Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">31.Wild Salmon Roll</h4>
+                                    </div>
+                                    <h5 class="price">$4.15</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--roll(6pcs)-->
+                        <div style="display:none;" class="Roll(8pcs)">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">32.California Roll</h4>
+                                        <p class="item_desc">crab,avocado</p>
+                                    </div>
+                                    <h5 class="price">$5.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">33.Avocado Roll</h4>
+                                        <p class="item_desc">avocado,cucumber,mayo</p>
+                                    </div>
+                                    <h5 class="price">$6.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">34.Yam Roll</h4>
+                                        <p class="item_desc">yam,mayo</p>
+                                    </div>
+                                    <h5 class="price">$6.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">35.Spicy Tuna Roll</h4>
+                                        <p class="item_desc">tuna,cucumber,korean spicy sauce</p>
+                                    </div>
+                                    <h5 class="price">$6.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">36.Spicy Salmon Roll</h4>
+                                        <p class="item_desc">salmon,cucumber,korean spicy sauce</p>
+                                    </div>
+                                    <h5 class="price">$6.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">37.Veggie Roll</h4>
+                                        <p class="item_desc">avocado,pepper,radish pickle,carrot,cucumber,mayo</p>
+                                    </div>
+                                    <h5 class="price">$6.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">38.Gold Califonia Roll</h4>
+                                        <p class="item_desc">crab,avocado,masago</p>
+                                    </div>
+                                    <h5 class="price">$7.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">39.Chopped Scallop Roll</h4>
+                                        <p class="item_desc">mayo,cucumber,chopped scallop,tobiko</p>
+                                    </div>
+                                    <h5 class="price">$7.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">40.Alaska Roll</h4>
+                                        <p class="item_desc">crab,avocado,smoked salmon,miso dressing</p>
+                                    </div>
+                                    <h5 class="price">$7.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">41.Dynamite Roll</h4>
+                                        <p class="item_desc">prawn,cucumber,avocado,masago</p>
+                                    </div>
+                                    <h5 class="price">$6.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">42.Unagi Roll</h4>
+                                        <p class="item_desc">cucumber,avocado,BBQ eel,unagi sauce</p>
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">43.Philadelphia Roll</h4>
+                                        <p class="item_desc">avocado,cream cheese,smoked salmon</p>
+                                    </div>
+                                    <h5 class="price">$7.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">44.Chicken Roll</h4>
+                                        <p class="item_desc">chicken,cucumber,lettuce,teriyaki sauce</p>
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">45.Beed Roll</h4>
+                                        <p class="item_desc">beef,cucumber,lettuce,teriyaki sauce</p>
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">46.Caterpillar Roll</h4>
+                                        <p class="item_desc">cucumber,avocado,prawn</p>
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">47.Spinach Crab Roll</h4>
+                                        <p class="item_desc">cucumber,masago,spinach,crab,spicy mayo</p>
+                                    </div>
+                                    <h5 class="price">$7.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">48.Salmon Munch Roll</h4>
+                                        <p class="item_desc">cooked salmon,cucumber</p>
+                                    </div>
+                                    <h5 class="price">$7.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">49.Mango Paradise</h4>
+                                        <p class="item_desc">avocado,mango,ebi,tamago egg,mango sauce</p>
+                                    </div>
+                                    <h5 class="price">$7.70</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">50.Cap Roll</h4>
+                                        <p class="item_desc">unagi,avocado,fried onion,unagi sauce</p>
+                                    </div>
+                                    <h5 class="price">$8.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--roll(8pcs)-->
+                        <div style="display:none;" class="Special Roll(9pcs)">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">51.Rainbow Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b> avocado,crab</p>
+                                        <p class="item_desc"><b>Top:</b>tuna,salmon,tai,ebi,rako,avocado,tobiko</p>
+                                        <p class="item_desc"><b>Sauce:</b>sweet and mayo sauce</p>
+                                    </div>
+                                    <h5 class="price">$12.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">52.Veggie King</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,avocado,lettuce,asparagus</p>
+                                        <p class="item_desc"><b>Top:</b>avocado,mango,tomato,green onion</p>
+                                        <p class="item_desc"><b>Sauce:</b>sweet sauce,balsamic sauce</p>
+                                    </div>
+                                    <h5 class="price">$11.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">53.Dragon Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,prawn,avocado</p>
+                                        <p class="item_desc"><b>Top:</b>eel,avocado,masago</p>
+                                        <p class="item_desc"><b>Sauce:</b>steak sauce,mayo</p>
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">54.Volcano Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,prawn,avocado</p>
+                                        <p class="item_desc"><b>Top:</b>scallop</p>
+                                        <p class="item_desc"><b>Sauce:</b>mustard mayo,teriyaki,spicy mayo</p>
+                                    </div>
+                                    <h5 class="price">$13.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">55.Energy Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>asparagus,avocado,tamago</p>
+                                        <p class="item_desc"><b>Top:</b>smoked salmon,eel</p>
+                                        <p class="item_desc"><b>Sauce:</b>sweet sauce,spicy mayo</p>
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">56.Spicy Tuna Toon Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,prawn,avocado</p>
+                                        <p class="item_desc"><b>Top:</b>spicy tuna</p>
+                                        <p class="item_desc"><b>Sauce:</b>mustard mayo,teriyaki sauce,spicy mayo</p>
+                                    </div>
+                                    <h5 class="price">$13.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">57.Holla Jalapena Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,avocado,crab,bean,jalapeno</p>
+                                        <p class="item_desc"><b>Top:</b>salmon</p>
+                                        <p class="item_desc"><b>Sauce:</b>spicy mayo</p>
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">58.Black Dragon Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucucmber,avocado,prawn,crab</p>
+                                        <p class="item_desc"><b>Top:</b>eel</p>
+                                        <p class="item_desc"><b>Sauce:</b>sweet sauce,balsamic sauce</p>
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">59.Beef King Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,crab,beef</p>
+                                        <p class="item_desc"><b>Top:</b>beef tataki</p>
+                                        <p class="item_desc"><b>Sauce:</b>teriyaki sauce</p>
+                                    </div>
+                                    <h5 class="price">$12.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">60.Mountain Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,crab,cream cheese,salmon</p>
+                                        <p class="item_desc"><b>Top:</b>salmon,avocado,tobiko,potato</p>
+                                        <p class="item_desc"><b>Sauce:</b>mustard mayo</p>
+                                    </div>
+                                    <h5 class="price">$12.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">61.Cream Cheese Roll</h4>
+                                        <p class="item_desc"><b>Inside:</b>cream cheese,mango,pepper,crab,asparagus</p>
+                                        <p class="item_desc"><b>Top:</b>smoked salmon</p>
+                                        <p class="item_desc"><b>Sauce:</b>balsamic sauce,sweet sauce</p>
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">62.Norimaki</h4>
+                                        <p class="item_desc"><b>Inside:</b>cucumber,tamago,spinach,pepper,beef,inari</p>
+                                        <p class="item_desc"><b>Top:</b></p>
+                                        <p class="item_desc"><b>Sauce:</b>mayo</p>
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">63.Mango Holic</h4>
+                                        <p class="item_desc"><b>Inside:</b>prawn,eel,tamago</p>
+                                        <p class="item_desc"><b>Top:</b>avocado,mango,tobiko</p>
+                                        <p class="item_desc"><b>Sauce:</b>mango sauce</p>
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--special roll(9pcs)-->
+                        <div style="display:none;" class="Sashimi">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">64.Tuna Sashimi(7pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$13.85</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">65.Salmon Sashimi(7pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">66.Wild Salmon(7pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$15.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">67.Tuna & Salmon(7pcs) </h4>
+
+                                    </div>
+                                    <h5 class="price">$14.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">68.Assorted(12pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$17.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">69.Deluxe(18pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$23.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">70.Spicy Tuna</h4>
+
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">71.Spicy Salmon</h4>
+
+                                    </div>
+                                    <h5 class="price">$13.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--sashimi-->
+                        <div style="display:none;" class="Sushi">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">72.Tamago</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">73.Inari</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">74.Tuna</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">75.Salmon</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">76.Ebi</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">77.Seaweed</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.40</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">78.Masago</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">79.Tai</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">80.Tako</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">81.Hokkigai</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">82.Chooped Scallop</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">83.Real Crab</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.00</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">84.Tobiko</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">85.Toro</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">86.Unagi</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">87.Smoked Salmon</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">88.Wild Salmon</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">89.Tuna Tataki</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">90.Beef Tataki</h4>
+
+                                    </div>
+                                    <h5 class="price">$2.50</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--sushi-->
+                        <div style="display:none;" class="Combo">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">91.Veggie combo(22pcs)</h4>
+                                        <p class="item_desc"><b>Roll:</b>Veggie Roll,Avocado Roll,Kappa Roll</p>
+                                    </div>
+                                    <h5 class="price">$13.46</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">92.Combo A(24pcs)</h4>
+                                        <p class="item_desc"><b>Roll:</b>California Roll,Dynamite Roll,Spicy Tuna Roll</p>
+                                    </div>
+                                    <h5 class="price">$16.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">93.Combo B(22pcs)</h4>
+                                        <p class="item_desc"><b>Roll:</b>California Roll,Dynamite Roll</p>
+                                        <p class="item_desc"><b>Sushi:</b>Ebi(2pcs),Salmon(2pcs),Tuna(2pcs)</p>
+                                    </div>
+                                    <h5 class="price">$17.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">94.Combo C(24pcs)</h4>
+                                        <p class="item_desc"><b>Roll:</b>Spicy Tuna Roll,Alaska Roll</p>
+                                        <p class="item_desc"><b>Sushi:</b>Ebi(2pcs),Toro(2pcs)</p>
+                                        <p class="item_desc"><b>Sashimi:</b>Salmon(2pcs).Tuna(2pcs)</p>
+                                    </div>
+                                    <h5 class="price">$25.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--combo-->
+                        <div style="display:none;" class="Party Tray">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">95.Party Tray Medium(59pcs)+Greem Salad</h4>
+                                        <p class="item_desc"><b>Roll(6):</b>California Roll,Alaska Roll,Tuna Roll,Salmon Roll,Yam Roll,Avocado Roll</p>
+                                        <p class="item_desc"><b>Sushi(15pcs):</b>Chef Choice</p>
+                                    </div>
+                                    <h5 class="price">$52.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">96.Party Tray Large(78pcs)+Greem Salad</h4>
+                                        <p class="item_desc"><b>Roll(8):</b>California Roll,Alaska Roll,Tuna Roll,Salmon Roll,Yam Roll,Avocado Roll,Dynamite Roll,Spicy Tuna Roll</p>
+                                        <p class="item_desc"><b>Sushi(18pcs):</b>Chef Choice</p>
+                                    </div>
+                                    <h5 class="price">$67.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--party tray-->
+                        <div style="display:none;" class="Teriyaki">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">100.Chicken</h4>
+
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">101.Beef </h4>
+
+                                    </div>
+                                    <h5 class="price">$11.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--teriyaki-->
+                        <div style="display:none;" class="Katsu">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">102.Chicken Katsu</h4>
+
+                                    </div>
+                                    <h5 class="price">$13.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">103.Don Katsu </h4>
+
+                                    </div>
+                                    <h5 class="price">$13.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--katsu-->
+                        <div style="display:none;" class="Udon">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">105.Plain Udon</h4>
+
+                                    </div>
+                                    <h5 class="price">$7.25</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">106.Beef Udon</h4>
+
+                                    </div>
+                                    <h5 class="price">$10.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">107.Chicken Udon</h4>
+
+                                    </div>
+                                    <h5 class="price">$10.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--udon-->
+                        <div style="display:none;" class="Don Bury">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">111.Unagi Don Eel</h4>
+
+                                    </div>
+                                    <h5 class="price">$15.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <!--don bury-->
+                        <div style="display:none;" class="Tempura">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">114.Yam Tempura(8pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$9.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">115.Veggie Tempura(10pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$9.95</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">116.Assorted Tempura(9pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$10.45</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">117.Prawn Tempura(7pcs)</h4>
+
+                                    </div>
+                                    <h5 class="price">$10.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--tempura-->
+                        <div style="display:none;" class="Sides">
+                            <ul>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">120.Miso Soup</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+                                <li>
+                                    <div class="item_info">
+                                        <h4 class="item_name">121.Rice</h4>
+
+                                    </div>
+                                    <h5 class="price">$1.75</h5>
+                                    <span class="separator"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--sides-->
+                    </article>
+
+                </div>
+
             </div>
-             <div class="col-md-8 col-sm-8">
-            </div>
-            
         </div>
     </div>
-</div>    
-    
+
 </body>
+
 </html>
